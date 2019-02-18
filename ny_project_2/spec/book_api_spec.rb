@@ -40,7 +40,6 @@ describe 'This will test the service books from the NY Times website. ' do
       @api_data.retrieve_title_data.each do |title|
         expect(title).to be_kind_of(String)
       end
-
     end
     it 'This test should make dagger data return an Integer' do
       @api_data.retrieve_dagger_data.each do |dagger|

@@ -71,4 +71,12 @@ class NYBookAPI
     end
     arr
   end
+
+  def retrieve_amazon_product_url_data
+    arr = []
+    retrieve_book_details.each do |amazon_product|
+      arr << amazon_produc['amazon_product_url']
+    end
+    arr
+  end
 end
