@@ -3,7 +3,7 @@ require 'dotenv'
 require 'httparty'
 require 'dotenv'
 Dotenv.load('./ny_project_2/.env')
-# this class will hold the nyapidata
+# this class will hold the NY times book data.
 class NYBookAPI
   include HTTParty
   base_uri 'https://api.nytimes.com/svc/books/v3'

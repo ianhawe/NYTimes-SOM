@@ -5,7 +5,7 @@ describe 'This will test the service books from the NY Times website. ' do
     @api_data = NYTimes.new.book_api
     @api_data.retrieve_api(ENV['API_KEY'])
   end
-  context 'Testing all data types on the service: books, all this data should return an array, as they are stored in an array in the SOM' do
+  context 'Testing all data types on the service: books' do
     it 'This test should check what class is being ran' do
       @api_data.retrieve_rank_data.each do |rank_data|
         expect(rank_data).to be_kind_of(Integer)
@@ -45,6 +45,11 @@ describe 'This will test the service books from the NY Times website. ' do
       @api_data.retrieve_dagger_data.each do |dagger|
         expect(dagger).to be_kind_of(Integer)
       end
+    end
+    it 'This test will test to see if the amazon url contains HTTPS' do
+      @api_data.retrieve_amazon_product_url_data.each do |amazon_url|
+        expect(amazon_url).to start_with("https")
+        end
     end
   end
 end
