@@ -30,7 +30,6 @@ This is a SOM created for NY times API. What this does is model out book-related
 10. In the '.env' file type 'api_key=' followed by your api key
 ``` api_key=123KJLD!@DKUAD ```
 
-
 ### How to use
 1. Open up the terminal in your chosen IDE
 2. Type bundle install, all the gems and dependancies will be installed
@@ -46,4 +45,3 @@ The super class is  ```ny_times_api.rb``` if you instaniate it, all the objects 
         expect(book_details).to be_kind_of(Object)
       end 
 ```
-### 
